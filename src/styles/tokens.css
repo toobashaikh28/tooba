@@ -1,0 +1,107 @@
+/* Design tokens. Every colour, size and space in the site comes from here.
+   Dark is the default. A light theme overrides the colour tokens under [data-theme='light']. */
+:root {
+  color-scheme: dark;
+
+  /* Neutrals */
+  --bg: #0E0E12;
+  --surface: #131318;
+  --surface-sunk: #1A1A21;
+  --ink: #ECECF1;
+  --muted: #A1A1AA;
+  --border: #2F2F38;
+  --border-control: #71717A; /* 3:1 against the page, for inputs */
+
+  /* Purple accent. Fills use --accent; small text and links use --accent-text. */
+  --accent: #7C3AED;
+  --accent-hover: #6D28D9;
+  --accent-text: #C4B5FD;
+  --accent-soft: #A78BFA;
+  --accent-border: #A78BFA;
+  --accent-wash: #241A3D;
+  --accent-ink: #FFFFFF;
+
+  /* Terminal: a dark panel in both themes */
+  --term-bg: #08080B;
+  --term-bar: #15151B;
+  --term-border: #2E2E38;
+  --term-text: #E4E4E7;
+  --term-dim: #A1A1AA;
+  --term-accent: #C4B5FD;
+  --term-control: #71717A;
+  --term-error: #FCA5A5;
+
+  /* Feedback */
+  --success: #4ADE80;
+  --warning: #FBBF24;
+  --error: #F87171;
+  --focus: #C4B5FD;
+
+  /* Type: one family (plus system mono for the terminal), weights 400, 500, 600 */
+  --font: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --fs-h1: clamp(2.375rem, 5.4vw, 3.75rem);
+  --fs-h2: 2rem;
+  --fs-h3: 1.125rem;
+  --fs-lead: 1.125rem;
+  --fs-body: 1rem;
+  --fs-text: 0.9375rem; /* 15px: summaries, bullets, facts */
+  --fs-small: 0.875rem; /* 14px: nav, buttons, chrome */
+  --fs-caption: 0.8125rem;
+
+  /* Spacing scale (8px rhythm) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+
+  /* Shape */
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+
+  /* Elevation: flat by default. One soft shadow for hover and the floating menu. */
+  --shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --backdrop: rgba(0, 0, 0, 0.6);
+
+  /* Motion */
+  --dur: 0.15s;
+
+  /* Layout */
+  --container: 1160px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --nav-h: 60px;
+
+  /* Layers */
+  --z-nav: 50;
+  --z-skip: 100;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #FFFFFF;
+  --surface: #FAFAFB;
+  --surface-sunk: #F4F4F6;
+  --ink: #18181B;
+  --muted: #52525B;
+  --border: #E4E4E7;
+  --border-control: #8A8A93;
+
+  --accent-text: #5B21B6;
+  --accent-border: #7C3AED;
+  --accent-wash: #F5F3FF;
+
+  --success: #15803D;
+  --warning: #B45309;
+  --error: #B42318;
+  --focus: #7C3AED;
+
+  --shadow-pop: 0 8px 24px rgba(24, 24, 27, 0.12);
+  --backdrop: rgba(24, 24, 27, 0.45);
+}
